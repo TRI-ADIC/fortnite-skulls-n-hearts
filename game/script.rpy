@@ -5,7 +5,6 @@
 
 # define e = Character("Eileen")
 
-
 # The game starts here.
 
 label start:
@@ -24,7 +23,7 @@ label start:
 
     # These display lines of dialogue.
 
-    stop music fadeout 1.0
+    stop music fadeout 2.0
 
     "This is it. This is really happening."
 
@@ -48,9 +47,7 @@ label start:
 
     play sound "fortnite-spawn.mp3"
 
-    pause 2.5
-
-    scene bg spawn
+    scene bg spawn with Fade(0.0, 0.0, 2.5)
 
     play music "fortnite-ambient.mp3"
 
@@ -130,7 +127,53 @@ label start:
 
     "..."
 
+    label test:
+
     "Okay, there's the battle bus. The coach was still nowhere in sigh-"
+
+    scene bg black
+
+    stop music
+
+    play sound "punch.mp3"
+    
+    "..."
+
+    "... Woah."
+
+    play music "fortnite-lobby.mp3"
+
+    show image "scene_1a.png" with Fade(0.0, 0.0, 1.0):
+        xcenter 0.65 yalign 1.0
+        ease 6 yoffset 1500
+
+    pause 6.0
+
+    "Okay."
+
+    "Emo? Check. Catgirl? Check. Emanating an unbelievable amount of angst that pierces every fiber of my being?"
+
+    "Yeah. She's cute."
+
+    "I'm feeling a lot of judgment for some reason. Shut up. I know my type."
+
+    "But obviously I'm not gonna be some creep and just walk up to her. That's not how it works anymore. I think."
+
+    "I've already accepted my lot in life. Ain't no way that's happening."
+
+    "No sir. Not ever. There is absolutely no possible way I'll be able to talk with her, and that's that."
+
+    "And even if I could, what would I even say? Nothing, that's what. I'd just be an idiot."
+
+    "I'm already moving on. Lemme' try and find… wait."
+
+    "Did that fox girl notice me?"
+
+    "Ah NAW."
+
+    "I turn and try to play it off. My face is burning so much."
+
+    "Stop it, Anon. I'm not Tomatotown guy."
 
     # This ends the game.
 
