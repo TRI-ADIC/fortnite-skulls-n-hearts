@@ -141,7 +141,7 @@ label start:
 
     "... Woah."
 
-    play music "fortnite-lobby.mp3"
+    play music "fortnite-lobby.mp3" volume 0.5
 
     show image "scene_1a.png" with Fade(0.0, 0.0, 1.0):
         xcenter 0.65 yalign 1.0
@@ -159,6 +159,11 @@ label start:
 
     "But obviously I'm not gonna be some creep and just walk up to her. That's not how it works anymore. I think."
 
+    show image "scene_1b.png":
+        xcenter 0.65 yalign 1.0 yoffset 1500
+        alpha 0.0
+        ease 0.5 alpha 1.0
+
     "I've already accepted my lot in life. Ain't no way that's happening."
 
     "No sir. Not ever. There is absolutely no possible way I'll be able to talk with her, and that's that."
@@ -168,6 +173,13 @@ label start:
     "I'm already moving on. Lemme' try and find… wait."
 
     "Did that fox girl notice me?"
+
+    stop music
+
+    show image "scene_1c.png" with Dissolve(0.5, time_warp=None, mipmap=None):
+        xcenter 0.65 yalign 1.0 yoffset 1500
+
+    pause 3.0
 
     "Ah NAW."
 
