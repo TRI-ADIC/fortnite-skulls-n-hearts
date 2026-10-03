@@ -5,6 +5,12 @@
 
 # define e = Character("Eileen")
 
+define jonesy = Character("Jonesy")
+define anon = Character("Anon")
+define meowskulls = Character("meowskulls")
+
+image jonesy default = "jonesy_default.png"
+
 # The game starts here.
 
 label start:
@@ -127,15 +133,13 @@ label start:
 
     "..."
 
-    label test:
-
     "Okay, there's the battle bus. The coach was still nowhere in sigh-"
 
     scene bg black
 
     stop music
 
-    play sound "punch.mp3"
+    play sound "punch.mp3" volume 0.5
     
     "..."
 
@@ -157,7 +161,7 @@ label start:
 
     "I'm feeling a lot of judgment for some reason. Shut up. I know my type."
 
-    "But obviously I'm not gonna be some creep and just walk up to her. That's not how it works anymore. I think."
+    "But obviously I'm not gonna be some creep and just {i}walk{/i} up to her. That's not how it works anymore. I think."
 
     show image "scene_1b.png":
         xcenter 0.65 yalign 1.0 yoffset 1500
@@ -181,11 +185,58 @@ label start:
 
     pause 3.0
 
+    play music "fortnite-lobby-speedup1.mp3" volume 0.5
+
     "Ah NAW."
 
     "I turn and try to play it off. My face is burning so much."
 
+    play music "fortnite-lobby-speedup2.mp3" volume 0.5
+
     "Stop it, Anon. I'm not Tomatotown guy."
+
+    "..."
+
+    "Anon. Stop. Please."
+
+    play music "fortnite-lobby-speedup3.mp3" volume 0.5
+
+    "STOP. THINKING. ABOUT. IT!"
+
+    scene bg black
+
+    stop music
+
+    play sound "body-impact.mp3"
+
+    pause 0.5
+
+    "I nearly fell back. I crashed into someone else."
+
+    "Who did I even run into. A living brick wall??? Of course Fortnite would have a guy like that."
+
+    label test:
+
+    "As I look up and scramble for an apology, before me stands… someone completely ordinary."
+
+    play music "fortnite-lobby.mp3" volume 0.5 fadein 0.5
+    
+    scene bg grass with Fade(0.0, 0.0, 0.5)
+
+    show jonesy_default with Dissolve(0.5, time_warp=None, mipmap=None):
+        xcenter 0.5 yoffset 50 zoom 0.5
+
+    jonesy "Yo."
+
+    anon "Uh..."
+
+    "Literally the most average looking white man you could ever behold. If men were a bell curve he'd be right at the center. He's so normal he's the one who looks out of place here."
+
+    "…"
+
+    "Am I seriously that weak that I bounced off of {i}him?{/i}"
+
+    "Wait, hang on."
 
     # This ends the game.
 
