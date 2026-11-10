@@ -7,9 +7,12 @@
 
 define jonesy = Character("Jonesy")
 define anon = Character("Anon")
-define meowskulls = Character("meowskulls")
+define meowskulls = Character("Meowskulls")
 
 image jonesy default = "jonesy_default.png"
+image jonesy concerned = "jonesy_concerned.png"
+image jonesy smile = "jonesy_smile.png"
+image jonesy thumbsup = "jonesy_thumbsup.png"
 
 # The game starts here.
 
@@ -117,7 +120,7 @@ label start:
 
     "Again, I wonder why I'm even here. Why did I choose to be here?"
 
-    "I don't care if that fat guy called Homer competed at some point. I don't want to be here. I don't belong here."
+    "I don't care if that Homer Simpson competed at some point. I don't want to be here. I don't belong here."
 
     "... Okay, get it together Anon. It's only 22 minutes of fighting."
 
@@ -166,7 +169,7 @@ label start:
     show image "scene_1b.png":
         xcenter 0.65 yalign 1.0 yoffset 1500
         alpha 0.0
-        ease 0.5 alpha 1.0
+        ease 0.25 alpha 1.0
 
     "I've already accepted my lot in life. Ain't no way that's happening."
 
@@ -180,7 +183,7 @@ label start:
 
     stop music
 
-    show image "scene_1c.png" with Dissolve(0.5, time_warp=None, mipmap=None):
+    show image "scene_1c.png" with Dissolve(0.25, time_warp=None, mipmap=None):
         xcenter 0.65 yalign 1.0 yoffset 1500
 
     pause 3.0
@@ -219,12 +222,12 @@ label start:
 
     "As I look up and scramble for an apology, before me stands… someone completely ordinary."
 
-    play music "fortnite-lobby.mp3" volume 0.5 fadein 0.5
+    play music "fortnite-og-remix.mp3" volume 0.4 fadein 0.5
     
     scene bg grass with Fade(0.0, 0.0, 0.5)
 
-    show jonesy_default with Dissolve(0.5, time_warp=None, mipmap=None):
-        xcenter 0.5 yoffset 50 zoom 0.5
+    show jonesy default with Dissolve(0.5, time_warp=None, mipmap=None):
+        xcenter 0.52 yoffset -40 zoom 0.45
 
     jonesy "Yo."
 
@@ -237,6 +240,106 @@ label start:
     "Am I seriously that weak that I bounced off of {i}him?{/i}"
 
     "Wait, hang on."
+
+    anon "Aren't… you that guy? That guy that's like… everywhere, in this game?"
+
+    "He chuckled."
+
+    jonesy "Yeah. I'm the guy."
+
+    jonesy "And you're Anon, right? I'm your coach."
+
+    jonesy "I was worried my squad was gonna have to go through a 3v4 right off the bat. You know we were supposed to meet up at the mansion?"
+
+    "I don't even know what to think about right now."
+
+    "Trying to forget about the fact that a cute girl caught me staring at her, I'm now forced to confront the idea of being coached by someone who is clearly not Master Chief." 
+
+    "And apparently, I had also completely missed a crucial, simple detail of a meetup point."
+
+    "I just want to bail out now."
+
+    anon "Uh… sorry. I guess I didn't get the memo."
+
+    jonesy "It's all good. That's what I'm here for. My name's Jonesy."
+
+    jonesy "I know what that look is. Trying to take in all the different crowds all at once."
+
+    jonesy "It's definitely your first time, huh? Tell me, whattayya think of it so far?"
+
+    anon "I think… It's a lot to take in."
+
+    anon "I don't, uh… well..."
+
+    anon "I thought it'd be fun to try my hand at this competition. But I don't think… uh..."
+
+    "Jonesy nodded knowingly."
+
+    jonesy "I know. Believe me."
+
+    jonesy "I remember my first time. It was simpler back then, but it all still had the same beats."
+
+    jonesy "The unknown island, the competition, the anticipation, the calm before the storm."
+
+    jonesy "Things may have gotten more colorful since those days, but the core of the game is still the same."
+
+    show jonesy smile with Dissolve(0.5, time_warp=None, mipmap=None):
+        xcenter 0.52 yoffset -40 zoom 0.45
+
+    jonesy "Drop in. Stick together. Move forward. Win."
+
+    "Jonesy flashes an unusually photogenic smile."
+
+    "It's way too photogenic. Wow."
+
+    jonesy "Think you can follow my lead, Anon? I can make this your win first try if you'll have me."
+
+    "He exudes a level of confidence that almost makes me forget I don't actually feel like trying. Almost."
+
+    "But... eh. Maybe I should just try? I don't know if it'll go anywhere though."
+
+    "Oh. He notices my apprehension."
+
+    show jonesy default with Dissolve(0.5, time_warp=None, mipmap=None):
+        xcenter 0.52 yoffset -40 zoom 0.45
+
+    jonesy "Hey. I've been through it all in this competition. I've led even the most bronze of teams into the victory royale."
+
+    jonesy "I may not seem like much compared to the rest of these guys, but I've been competing long enough that I know the loop of Fortnite like the back of my hand."
+
+    jonesy "..."
+
+    jonesy "..."
+
+    show jonesy concerned with Dissolve(0.3, time_warp=None, mipmap=None):
+        xcenter 0.52 yoffset -40 zoom 0.45
+
+    jonesy "..."
+
+    jonesy "Anon, are you really up for this?"
+
+    jonesy "It's all good if you'd like to leave. You can take the teleporter off the island."
+
+    jonesy "Don't worry about it, really. We get no-shows all the time."
+
+    "I... guess I really can leave."
+
+    "But I'm already here. I might as well have 22 minutes of gaming before I head back to real life."
+
+    anon "Nah, it's fine. I'd like to try this out once. It seems like it could be... fun."
+
+    show jonesy thumbsup with Dissolve(0.3, time_warp=None, mipmap=None):
+        xcenter 0.52 yoffset -40 zoom 0.45
+    
+    "Jonesy gives me a thumbs-up."
+
+    jonesy "That's all I'm looking for."
+
+    jonesy "Now, let's meet up with the rest of the squad. We still haveta' discuss where we're dropping."
+
+    scene bg black with Dissolve(2.0, time_warp=None, mipmap=None)
+
+    pause 1.0
 
     # This ends the game.
 
